@@ -2,6 +2,7 @@
 ## ProyectoCompJuanBarrosV50(EjercicioClasePhp) 2023/05/17
 ### Mis agradecimientos a CIFP Francesc de Borja Moll, Josep Lluis Huerta Grafiá, Emilio Real Artacho, Miquel Ángel Cabot Nadal y todas las personas del centro. Por prestarme su ayuda, atención y trabajo, para poder mejorar mi formación y llevar a buen puerto este modesto proyecto durante las acciones formativas realizadas en el centro.
 ### También agradecer a ADEMA UIB el buen trato recibido durante el periodo de prácticas en sus instalaciones.
+### Y al SOIB por ofrecerme esta oportunidad de mejorar mi formación.
 ### Gracias a todos.
 ----
 
