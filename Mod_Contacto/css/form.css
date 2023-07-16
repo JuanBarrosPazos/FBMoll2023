@@ -1,0 +1,84 @@
+/* ESTILOS FORMULARIO */
+
+section {
+    width: fit-content;
+    margin: 0.4em;
+    margin: 0.2em auto 0.2em auto;
+    border: solid 1px #02a58f;
+    border-radius: 0.6em;
+    font-size: 1.0em;
+}
+section hr{
+    background-color: #02a58f;
+}
+section, select, .timeInfo, .info{
+    transition: none !important;
+}
+
+section, section hr, input, select, textarea{
+    border: solid 1px #02a58f;
+    border-radius: 0.5em;
+}
+    
+div {
+    text-align: left;
+}
+
+label, input {
+    display: inline-block;
+    vertical-align: baseline;
+}
+    
+label, input, select {
+    margin: 0.3em;
+}
+    
+label{
+    width: 6.6em;
+    min-width: max-content;
+    text-align: right;
+}
+input {
+    width: 14.8em;
+    padding-top: 2px;
+}
+.inpLit{
+    width: 10.8em !important;
+}
+
+.timeInfo{
+    text-align: center;
+    width: 90%;
+    margin: 0.2em auto 0.4em auto;
+}
+textarea {
+    display: inline-block;
+    text-align: left !important;
+    margin-right: auto;
+    margin-left: auto;
+    margin: 1px 1px 1px 8px;
+}
+#info {
+    font-size: 0.9em;
+    text-align: center;
+    margin: 0.1em auto 0.1em auto;
+}
+
+
+.footer a{  
+    color: #343434;
+    text-decoration: none;
+}
+.footer a:hover{
+    color: #ccc;
+    text-decoration: none;
+}
+
+.footer{
+    flex-wrap: nowrap;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0.2em auto 0.2em auto;
+    width: 99.9vw;
+}

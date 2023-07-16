@@ -1,0 +1,693 @@
+
+/*        PALETA COLORES ADOBE      
+        #D6FFD6        #3CBCE6        #AB6EFA
+        #E6807A        #FAD280
+*/
+
+/*          ********          */
+/*        ESTILOS MEDIA       */
+/*          ********          */
+
+@media (max-width:880px) {
+    
+    .conte, .datos, .datosB, .datosC, .datosE{
+        margin: 0.1em auto 0.1em auto !important;
+        max-height: auto !important;
+    } 
+    .datos, .datosDonde{
+        width: 97.6% !important;
+    }
+
+    .header h1{
+        font-size: 1.8em !important;
+        margin-right: 2.8em !important;
+    }
+    .datosE .imgOut, .datosC .imgOut{
+        visibility: hidden !important;
+        display: none !important;
+    }
+    .datos p, .datosB p, .datosC p, .datosD p, .datosE p{
+        padding: 0.1em 0.4em !important;
+    }
+    .datos img, .datos video, .SomosImg{
+        max-width: 12.8em !important;
+    }
+    .imgOutB{
+        visibility: hidden !important;
+        display: none !important;
+        }
+    .datosD img{
+        max-width: 8.4em !important;
+    }
+    select, .timeInfo, .info{
+        font-size: 0.9em !important;
+        transition: none !important;
+    }
+    section{
+        font-size: 1.0em !important;
+        min-width:40.8vw !important;
+    }
+    #login{
+        display: none;
+        visibility: hidden;
+    }
+    #login2{
+        display: block !important;
+        visibility: visible !important;
+        position: absolute !important;
+        top: 0.6em;
+        right: 0.6em;
+        max-width: min-content !important;
+        float: right;
+        padding: 0.4em;
+        text-align: center !important;
+    }
+    #login2 img{
+        display: block;
+        margin: auto;
+        width: 1.8em;
+        height: auto;
+        border: 1px solid #7c7c7c;
+        border-radius: 4px;
+    }
+    #login2 a:hover img{
+        opacity: 60% !important;
+    }
+
+    #datosTUs img{
+        min-height: 1.6em !important;
+    }
+    .openClient{
+        height: 40px !important;
+    }
+    .openClient:hover{
+        height: 98px !important;
+    }
+    .openClient input{
+        font-size: 0.6em !important;
+    }
+
+} /* FIN @media screen and (max-width:880px) */
+
+@media (max-width:440px) {
+    .logo{
+        margin: auto auto auto 0.6em;
+        width: 4.2em !important;
+        height: auto;
+    }
+    .header h1{
+        font-size: 1.4em !important;
+        margin-right: 3.8em !important;
+
+    }
+    .conte, .datos, .datosB, .datosC, .datosD, .datosE{
+        margin: 0.1em auto 0.1em auto !important;
+        max-height: auto !important;
+    }
+    .datos p, .datosB p, .datosC p, .datosD p, .datosE p{
+        padding: 0.1em 0.4em !important;
+    }
+    .datos, .datosDonde, .datosB, .datosC{
+        width: 94.6% !important;
+    }
+    .datosD, .datosE{
+        width: 47.2% !important;
+        }
+    .datos img, .datos video{
+        width: 13.8em !important;
+        margin: 0.2em 0.1em;
+    }
+    .datosC img{
+        max-width: 15.8em !important;
+        }
+    .datosE .SomosImg, .datosD img{
+        max-width: 9.8em !important;
+    }
+    .imgOut{
+        visibility: hidden !important;
+        display: none !important;
+    }
+    .datos {
+        height: auto !important;
+    }
+    .datos iframe{
+        width: 94%;
+        height: 62.4vmax !important;
+        margin: 0.8em auto 0.8em auto !important;
+    }
+    .footer img{
+        margin: 0.6em !important;
+        width: 1.6em !important;
+        height: auto;
+    }
+    .botonVerde, .botonNaranja, .botonRojo, .botonAzul, .botonLila, select {
+        font-size: 0.8em;
+        min-width: 3.0em !important;
+        margin: 0.2em !important;
+         /* velocidad transicion */
+         /* Anula las transiciones heredadas */
+         transition: none !important;
+    }
+    .botonVerde:hover, .botonNaranja:hover, .botonRojo:hover, .botonAzul:hover, .botonLila:hover {
+        background-color: #fdc97a;
+        /* Aplica la transición sólo al backgroud-color */
+        transition: background-color 1.4s ease !important;
+    }
+    .timeInfo, .info{
+        font-size: 0.8em !important;
+    }
+    section{
+        min-width: 70.8vw !important;
+        font-size: 1.0em !important
+    }
+
+    .openClient{
+        top: 0.1em !important;
+        right: 0.1em !important;
+    }
+
+} /* FIN @media screen and (max-width:440px) */
+ 
+/*
+@media screen and (max-height:1450px) {
+    .datos, .datosB, .footer, .header, .conte{
+        margin: 1.2em auto 1.2em auto !important;
+    }
+    .datos, .datosB{
+        height: 26.2em !important;
+    }
+} 
+
+@media screen and (max-height:950px) {
+    .datos, .datosB, .footer, .header, .conte{
+        margin: 0.1em auto 0.1em auto !important;
+    }
+    .datos, .datosB{
+        height: 18.5em !important;
+    }
+}
+
+@media screen and (max-height:600px) {
+    .datos, .datosB, .footer, .header, .conte{
+        margin: 0.1em auto 0.1em auto !important;
+    }
+    .datos, .datosB{
+        height: 12.5em !important;
+    }
+}
+*/
+
+/*        FIN ESTILOS MEDIA        */
+
+
+/*             ********            */
+/*        ESTILOS GENERALES        */
+/*             ********            */
+
+/* ESTILOS ETIQUETAS HTML */
+
+body{
+    /**/
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /**/
+    text-align: center;
+    padding: 0px;
+    margin: 0px;
+    color: #343434;
+    font-size: 1.0em;
+    font-family: 'Times New Roman', Times, serif;
+    background-color: #e3fbff;
+}
+
+a, .menu a{  
+    color: #343434;
+    text-decoration: none;
+}
+a:hover{
+    color: #ccc;
+    text-decoration: none;
+}
+button a, button a:hover{
+    color: #343434;
+}
+
+/* FIN ESTILOS ETIQUETAS HTML */
+
+/*    ********    */
+
+/* ESTILOS COMPARTIDOS */
+
+.datos, .datosB, .datosC, .datosD, .datosE{
+    border: 1px solid #02a58f;
+    border-radius: 1.2em;
+}
+
+.menu, .datos, .datosB, .datosC, .datosD, .datosE, .footer{
+    margin: 0.2em auto 0.2em auto;
+}
+
+/**/
+.header, .menu, .datos{
+    /*width: 99.9vw;*/
+    width: auto;
+}
+.datosDonde{
+    width: 80.4%;
+}
+.footer{
+    width: 98.8%;
+}
+.header, .menu, .footer{
+    /**/
+    flex-wrap: nowrap;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    /**/
+}
+
+/* FIN ESTILOS COMPARTIDOS */
+
+/*    ********    */
+
+/* ESTILOS INDIVIDUALES */
+
+.header{
+    height: 8.0em;
+    background-image: url("../img/Logos/header-bg.jpg");
+    background-repeat: no-repeat; 
+    background-size: cover;
+    background-position: center;
+}
+.header h1{
+    /**/
+    flex-grow: 1;
+    /**/
+    text-align: center;
+    font-size: 2.9em;
+    color: #e3fbff !important;
+    margin-right: 1.4em;
+}
+.logo{
+    margin: auto auto auto 0.6em;
+    width: 5.4em;
+    height: auto;
+}
+.menu{
+    height: 2.2em;
+}
+
+.conte{
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    width: auto;
+    height: auto;
+    margin: 0.2em 9.5em 0.2em 9.5em;
+    /*position: relative; Para colocar el footer en su sitio */
+}
+
+.contedatosform{
+    display: block !important;
+    width: 40.0%;
+    max-width: 400px;
+    margin: 0.2em auto;
+}
+
+.datos{
+    display: block;
+    }
+.datosB, .datosC, .datosD, .datosE{
+    display: inline-block;
+    }
+.datos, .datosB, .datosC, .datosD, .datosE{
+    text-align: center;
+    min-height: 14.8em;
+    overflow:hidden;
+    }
+.datosB{
+    width: 49.4%;
+    }
+.datosC, .datosE{
+    width: 32.4%;
+    }
+.datosD{
+    width: 24.2%;
+    }
+.datos h5, .datosB h5, .datosC h5, .datosD h5, .datosE h5,
+.datos p, .datosB p, .datosC p, .datosD p, .datosE p{
+    margin: 0.3em;
+}
+.datos p, .datosB p, .datosC p, .datosD p, .datosE p{
+    text-align: justify;
+    padding: 0.2em 0.8em;
+}
+
+.datos img, .datos video, .datosB img, .datosB video, .datosC img, .datosC video, .datosD img, .datosD video, .datosE img, .datosE video{
+    display: inline-block;
+    height: auto;
+    margin: 0.4em auto 0.2em auto;
+    border-radius: 0.6em;
+}
+.datos img, .datos video, .SomosImg{
+    max-width: 14.0em;
+}
+.datosB img, .datosB video, .datosC img, .datosC video, .datosD img, .datosD video, .datosE img, .datosE video{
+    width: 10.0em;
+}
+
+.imgOut{
+    visibility: visible;
+}
+
+.vpresent {
+    /* Video Presentacion*/
+	position: relative;
+    height: auto;
+}
+
+.datos iframe{
+    display: block;
+    margin: 1.8em auto 0.8em auto;
+    border-radius: 0.6em;
+    width: 94%;
+    min-height: 14.6em !important;
+    border: none;
+}
+
+.footer img{
+    margin: 1.2em;
+    width: 2.3em;
+    height: auto;
+}
+.footer a img {
+        opacity: 50%;
+}
+.footer a:hover img {
+    opacity: 100% !important;
+}
+
+
+/* FIN ESTILOS INDIVIDUALES */
+
+/*    ********    */
+
+/* ESTILOS BOTONES */
+
+.botonVerde {
+	background-color:  #02a58f;
+}
+.botonNaranja {
+	background-color: #fdc97a;
+}
+.botonRojo {
+	background-color: #fc6060;
+}
+.botonAzul {
+	background-color: #7db8fc;
+}
+.botonLila {
+	background-color: #dd92fd;
+}
+
+.botonVerde, .botonNaranja, .botonRojo, .botonAzul, .botonLila, select {
+    color: #343434;
+    min-width: 8.0em;
+	cursor: pointer;
+	border: none;
+	vertical-align: text-bottom;
+	margin: 0.4em;
+	padding: 5px 5px 3px 5px !important;
+	border-radius: 4px;
+    /*
+    -webkit-transition: all 0.6s ease;
+    -moz-transition: all 0.6s ease;
+    */
+    /* velocidad transicion */
+    transition: all 1.4s ease;
+}
+/*  */
+.botonVerde:hover, .botonNaranja:hover, .botonRojo:hover, .botonAzul:hover, .botonLila:hover {
+	background-color: #fdc97a;
+    /*
+    -webkit-transition: all 0.6s ease;
+    -moz-transition: all 0.6s ease;
+    */
+    transition: all 1.4s ease;
+  
+}
+
+/* FIN ESTILOS BOTONES */
+
+/*    ********    */
+
+/* ESTILOS FORMULARIO */
+
+    section {
+        display: block;
+        width: fit-content;
+        min-width: 30.0%;
+        margin: 0.2em auto 0.2em auto;
+        padding: 0.1em 0.8em;
+        border: solid 1px #02a58f;
+        border-radius: 0.6em;
+        font-size: 1.0em;
+    }
+    section hr{
+        background-color: #02a58f;
+    }
+    section, select, .timeInfo, .info{
+        transition: none !important;
+    }
+
+    section, section hr, input, select, textarea{
+        border: solid 1px #02a58f;
+        border-radius: 0.5em;
+    }
+        
+    div {
+        text-align: left;
+    }
+
+    label, input {
+        display: inline-block;
+        vertical-align: baseline;
+    }
+        
+    label, input, select {
+        margin: 0.3em;
+    }
+        
+    label{
+        width: 6.6em;
+        text-align: right;
+    }
+    input {
+        width: 14.8em;
+        padding-top: 2px;
+    }
+    .inpLit{
+        width: 10.8em !important;
+    }
+
+    .timeInfo{
+        text-align: center;
+        width: 90%;
+        margin: 0.2em auto 0.4em auto;
+    }
+    textarea {
+        display: inline-block;
+        text-align: left !important;
+        margin-right: auto;
+        margin-left: auto;
+        margin: 1px 1px 1px 8px;
+    }
+    #info {
+        font-size: 0.9em;
+        text-align: center;
+        margin: 0.1em auto 0.1em auto;
+    }
+
+    #check{
+        max-width: max-content !important;
+    }
+    
+    .errorD{
+        display: block;
+        width: 99.8% !important;
+        text-align: center;
+        margin: 0.4em auto 0.4em auto !important;
+        color: #ff0000;
+        /*
+        padding: 0.1em;
+        font-weight: bolder;
+        */
+        font-size: 0.9em;
+    }
+
+    .varVal{
+        display: block;
+        min-width: max-content;
+        text-align: center;
+        margin: 0.1em 0.3em 0.9em 0.3em !important;
+        padding: 0.1em;
+        font-weight: bolder;
+        font-size: 60.0%;
+    }
+    
+    
+
+        /* ESTILOS FORM DE PAGINA DE RESPUESTA */
+
+    #respuesta{
+        text-align: left;
+        margin: 0.3em auto 0.3em auto;
+        padding: 0.4em;
+    }
+    #respuesta h5  {
+        text-align: right;
+        display: inline-block;
+        margin: 0.1em 0.3em 0.1em 0.1em;
+        width: 7.4em;
+    }
+    .textGet{
+        display: inline-block; 
+        width: max-content;
+    }
+
+    .titComent{
+        display: inline-block;
+        vertical-align: top;
+    }
+    .textComent{
+        display: inline-block; 
+        width: 11.6em;
+        margin-bottom: 0.4em;
+    }
+    
+/* FIN ESTILOS FORMULARIO */
+
+/* ESTILOS CUADRO ACCESO USUARIOS */
+
+#login2{
+    display: none;
+    visibility: hidden;
+}
+#login, .openClient{
+    position: fixed;
+    top: 0.6em;
+    right: 0.6em;
+    display: block;
+    max-width: min-content !important;
+    float: right;
+    padding: 0.4em;
+    text-align: center !important;
+}
+#login{ 
+    height: auto;
+    background-color: #e3fbff;
+    border: solid 0.14em #02a58f;
+    border-radius: 0.8em;
+    opacity: 72.0%;
+    font-size: 0.9em;
+}
+#login input, .openClient input{
+    margin: 0.2em auto 0.2em auto;
+    width: auto !important;
+}
+#login a{
+    font-size: 70.0%;
+}
+.openClient{
+    color:#ccc;
+    border:none;
+    background-color:transparent;
+    height: 50px;
+    overflow: hidden;
+    transition: all 1.4s ease;
+    cursor: pointer;
+}
+.openClient:hover{
+    display: block;
+    height: 112px;
+    transition: all 1.4s ease;
+    /*border: 1px solid #343434 !important;*/
+}
+#datosTUs img, .imgUser{
+    display: block;
+    margin: auto;
+    height: auto;
+    min-height: 2.1em;
+}
+#datosTUs img, .imgUser{
+    width: 30.0%;
+    max-width: 100px;
+    border-radius: 6px;
+}
+
+#datosTUs{
+    text-align: center !important;
+}
+#datosTUs p, #modDat p{
+    margin: 0.1em auto 0.1em auto;
+    padding: 0.1em;
+    font-size: 0.9em;
+}
+
+
+/*    ********    */
+
+ /* BORDES TABLAS DE RESULTADOS. */
+ .BorderInf {
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: #CCC;
+}
+.BorderSup {
+	border-top-width: 1px;
+	border-top-style: solid;
+	border-top-color: #CCC;
+}
+.BorderInfDch {
+	border-right-width: 1px;
+	border-bottom-width: 1px;
+	border-right-style: solid;
+	border-bottom-style: solid;
+	border-right-color: #CCC;
+	border-bottom-color: #CCC;
+}
+.BorderDch {
+	border-right-width: 1px;
+	border-right-style: solid;
+	border-right-color: #CCC;
+}
+
+/*    ********    */
+
+/* FLOTANTE ERRORES FORMULARIO */
+
+.errorsimg{ 
+    margin: 0.2em auto 0.2em auto;
+    width: max-content;
+    padding: 0.8em;
+    border: 1px solid #fd9c09;
+    border-radius: 8px;
+    height: fit-content;
+}
+
+.imgForm{
+    width:98.4%;
+    border: none;
+    margin: 1.2em auto 0.2em auto;
+}
+.imgForm img{
+    border-radius: 6px;
+    width: 80px;
+}
+
+.imgForm h4, .imgForm h5, .errorsimg h5{
+    margin: 0.2em;
+    padding: 0.2em;
+}

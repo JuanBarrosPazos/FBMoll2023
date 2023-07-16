@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- ARCHIVO DE RECEPCION DE DATOS DEL FORMULARIO FUNCIONANDO OK -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="copyright" content="Juan Manuel Barr&oacute;s Pazos © 2006 MDC">
+    <meta name="description" content="Resturante en Palma de Mallorca, Ocimax">
+    <meta name="keywords" content="Palma de Mallorca, Ocimax, Restaurante, Comidas, Cenas">
+    <meta name="author" content="Juan Manuel Barr&oacute;s Pazos">
+    <meta name="robots" content="all, index, follow" />
+    <meta name="audience" content="All" />
+    
+    <title>La Perla Restaurante Contacto</title>
+
+    <link href="../img/Logos/logo.png" type='image/ico' rel='shortcut icon' />
+    <link rel="stylesheet" type="text/css" href="../css/style.css" media="screen">
+    
+    <script src="../jquery/jquery-3.6.2.js"></script>
+    <script src="../jquery/jquery-3.6.2.min.js"></script>
+    
+    <script>
+ 
+        /**
+        * Funcion que captura las letiables pasados por GET
+        * Devuelve un array de clave=>valor
+        */
+        function getGET()
+        {
+            // capturamos la url
+            let loc = document.location.href;
+            // si existe el interrogante
+            if(loc.indexOf('?')>0)
+            {
+                // cogemos la parte de la url que hay despues del interrogante
+                let getString = loc.split('?')[1];
+                // obtenemos un array con cada clave=valor
+                let GET = getString.split('&');
+                let get = {};
+                // recorremos todo el array de valores
+                for(let i = 0, l = GET.length; i < l; i++){
+                    let tmp = GET[i].split('=');
+                    get[tmp[0]] = unescape(decodeURI(tmp[1]));
+                }
+                return get;
+            }
+        }
+    
+        window.onload = function()
+        {
+            // Cogemos los valores pasados por get
+            let valores=getGET();
+            if(valores)
+            {
+                /*
+                recogemos los valores que nos envia la URL en letiables para trabajar con ellas
+                */
+                let nombre = valores['nombre'];
+                nombre = nombre.replace(/\+/gi,' ');
+                let apellido = valores['apellido'];
+                apellido = apellido.replace(/\+/gi,' ');
+                let mail = valores['mail'];
+                let telf = valores['telf'];
+                let interes = valores['interes'];
+                interes = interes.replace(/\+/gi,' ');
+                let nComen = valores['nComen'];
+                let nMesas = valores['nMesas'];
+                let fecha = valores['fecha'];
+                let hora = valores['hora'];
+                let coment = valores['coment'];
+                coment = coment.replace(/\+/gi,' ');
+                coment = coment.replace(/<|>|{|}|\[|\]|\(|\)|\*|\;|\"|\'|\?|\$/gi,'');
+
+                    // hacemos un bucle para pasar por cada indice del array de valores
+                for(let index in valores)
+                {
+                   // document.write(" clave: "+index+" - valor: "+valores[index]);
+                }
+                document.getElementById("nombre").innerHTML = nombre+' '+apellido;
+                document.getElementById("mail").innerHTML = mail;
+                document.getElementById("telf").innerHTML = telf;
+                document.getElementById("interes").innerHTML = interes;
+                document.getElementById("nComen").innerHTML = nComen;
+                document.getElementById("nMesas").innerHTML = nMesas;
+                document.getElementById("fecha").innerHTML = fecha;
+                document.getElementById("hora").innerHTML = hora;
+                document.getElementById("coment").innerHTML = coment;
+            }else{
+                // no se ha recibido ningun parametro por GET
+                document.getElementById("nombre").innerHTML = "NO HAY VALORES";
+            }
+        }
+    </script>
+         
+</head>
+
+<body>
+        <div class="header">
+            <a href="../index.html">
+                <img class="logo" src="../img/Logos/logo.png" id="logo" alt="logo" />
+            </a>
+            <h1>LA PERLA CONTACTO</h1>
+        </div>
+        <div class="menu">
+            <a href="../index.html"><button class="botonVerde">INCIO</button></a>
+            <a href="carta.html"><button class="botonVerde">CARTA</button></a>
+            <a href="vinos.html"><button class="botonVerde">VINOS</button></a>
+            <a href="donde.html"><button class="botonVerde">DONDE</button></a>
+        </div>
+        
+    <section id="respuesta">
+                <h3 style="text-align: center; margin: 0.5em auto auto auto;">
+                    SU MENSAJE
+                </h3>
+        <hr>
+
+        <h5>NOMBRE</h5><div class="textGet" id="nombre"></div>
+            <br>
+        <h5>MAIL</h5><div class="textGet" id="mail"></div>
+            <br>
+        <h5>TLF</h5><div class="textGet" id="telf"></div>
+            <br>
+        <h5>INTERES</h5><div class="textGet" id="interes"></div>
+            <br>
+        <h5>N&ordm; PERSONAS</h5><div class="textGet" id="nComen"></div>
+            <br>
+        <h5>N&ordm; MESAS</h5><div class="textGet" id="nMesas"></div>
+            <br>
+        <h5>FECHA</h5><div class="textGet" id="fecha"></div>
+            <br>
+        <h5>HORA</h5><div class="textGet" id="hora"></div>
+            <br>
+        <h5 class="titComent">COMENTARIO</h5>
+        <div class="textComent" id="coment"></div>
+            <br>
+        <div style="text-align: center;">
+            <a href="../www/contacto.html"><button class="botonVerde">CONFIRMAR</button></a>
+            <a href="../index.html"><button class="botonVerde">CANCELAR</button></a>
+        </div>
+        
+        <hr>
+        <h5 style="text-align: center !important; width: auto;">
+            NOS PONDREMOS EN CONTACTO EN BREVE.<br>MUCHAS GRACIAS
+        </h5>
+    </section>
+
+        <div class="footer">
+            <a href="#">
+                <img src="../img/Icos/IcoFacebook.png" alt="IcoFacebook">
+            </a>
+            <a href="#">
+                <img src="../img/Icos/IcoTwitter.png" alt="IcoTwitter">
+            </a>
+            <a href="#">
+                <img src="../img/Icos/IcoTelegram.png" alt="IcoTelegram">
+            </a>
+            <a href="#">
+                <img src="../img/Icos/IcoMap.png" alt="IcoMap">
+            </a>
+            <a href="#">
+                <img src="../img/Icos/IcoTlf.png" alt="IcoTlf">
+            </a>
+            <a href="#">
+                <img src="../img/Icos/IcoWhatsApp.png" alt="IcoWhatsApp">
+            </a>
+        </div>
+
+        <div class="footer">
+            <a href="https://programasgratisytutoriales.blogspot.com/" target="_blank">
+                &copy; Juan Barr&oacute;s Pazos 2022/23
+            </a>
+        </div>
+        
+</body>
+</html>

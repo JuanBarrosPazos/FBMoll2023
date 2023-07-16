@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- ARCHIVO DEL FORMULARIO ORIGINAL FUNCIONANDO OK -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="copyright" content="Juan Manuel Barr&oacute;s Pazos © 2006 MDC">
+    <meta name="description" content="Resturante en Palma de Mallorca, Ocimax">
+    <meta name="keywords" content="Palma de Mallorca, Ocimax, Restaurante, Comidas, Cenas">
+    <meta name="author" content="Juan Manuel Barr&oacute;s Pazos">
+    <meta name="robots" content="all, index, follow" />
+    <meta name="audience" content="All" />
+    
+    <title>La Perla Restaurante Contacto</title>
+
+    <link href="../img/Logos/logo.png" type='image/ico' rel='shortcut icon' />
+    <link rel="stylesheet" type="text/css" href="../css/style.css" media="screen">
+    
+    <script src="../jquery/jquery-3.6.2.js"></script>
+    <script src="../jquery/jquery-3.6.2.min.js"></script>
+    <script src="../js/func.js"></script>
+
+    <script type="text/JavaScript">
+
+        // Esta función limita el número de carácteres del text area de comentarios.
+    function limita(elEvento, maximoCaracteres) {
+          var elemento = document.getElementById("coment");
+         
+          // Obtener la tecla pulsada 
+          var evento = elEvento || window.event;
+          var codigoCaracter = evento.charCode || evento.keyCode;
+          // Permitir utilizar las teclas con flecha horizontal
+          if(codigoCaracter == 37 || codigoCaracter == 39) {
+            return true;
+          }
+         
+          // Permitir borrar con la tecla Backspace y con la tecla Supr.
+          if(codigoCaracter == 8 || codigoCaracter == 46) {
+            return true;
+          }
+          else if(elemento.value.length >= maximoCaracteres ) {
+            return false;
+          }
+          else {
+            return true;
+          }
+    } // FIN function limita(elEvento, maximoCaracteres)
+         
+    function actualizaInfo(maximoCaracteres) {
+          var elemento = document.getElementById("coment");
+          var info = document.getElementById("info");
+         
+          if(elemento.value.length >= maximoCaracteres ) {
+            info.innerHTML = "Máximo "+maximoCaracteres+"caracteres";
+          }
+          else {
+            info.innerHTML = "Restan "+(maximoCaracteres-elemento.value.length)+" caracteres.";
+          }
+        }
+        // Tendremos que dar el id que tenga el text area y añadir onkeypress="return limita(event, 100);" onkeyup="actualizaInfo(100)" para limitar los caracteres a 100 en este caso.
+        function MM_validateForm() { 
+          if (document.getElementById){
+            var i,p,q,nm,test,num,min,max,errors='',args=MM_validateForm.arguments;
+            for (i=0; i<(args.length-2); i+=3) { test=args[i+2]; val=document.getElementById(args[i]);
+              if (val) { nm=val.name; if ((val=val.value)!="") {
+                if (test.indexOf('isEmail')!=-1) { p=val.indexOf('@');
+                  if (p<1 || p==(val.length-1)) errors+='- '+nm+' must contain an e-mail address.\n';
+                } else if (test!='R') { num = parseFloat(val);
+                  if (isNaN(val)) errors+='- '+nm+' must contain a number.\n';
+                  if (test.indexOf('inRange') != -1) { p=test.indexOf(':');
+                    min=test.substring(8,p); max=test.substring(p+1);
+                    if (num<min || max<num) errors+='- '+nm+' must contain a number between '+min+' and '+max+'.\n';
+              } } } else if (test.charAt(0) == 'R') errors += '- '+nm+' is required.\n'; }
+            } if (errors) alert('The following error(s) occurred:\n'+errors);
+            document.MM_returnValue = (errors == '');
+        } }
+        
+    </script>
+            
+</head>
+
+<body>
+        <div class="header">
+            <a href="../index.html">
+                <img class="logo" src="../img/Logos/logo.png" id="logo" alt="logo" />
+            </a>
+            <h1>LA PERLA CONTACTO</h1>
+        </div>
+        <div class="menu">
+            <a href="../index.html"><button class="botonVerde">INCIO</button></a>
+            <a href="carta.html"><button class="botonVerde">CARTA</button></a>
+            <a href="vinos.html"><button class="botonVerde">VINOS</button></a>
+            <a href="donde.html"><button class="botonVerde">DONDE</button></a>
+            <a href="somos.html"><button class="botonVerde">NOSOTROS</button></a>
+        </div>
+    <div class="conte">
+    <section>
+                <h3>FORMULARIO DE CONTACTO</h3>
+        <hr>
+
+        <form id="fvalida" name="fvalida" method="get" action="contactoDat.html">
+
+            <div>
+                <label for="nombre">Nombre: </label>
+                <input autofocus id="nombre" name="nombre" pattern="[a-zA-Z\s]{3,20}" type="text" size="20" maxlength="20" tabindex="1"  required>
+            </div>
+
+            <div>
+                <label for="apellido">Apellido: </label>
+                <input id="apellido" name="apellido" pattern="[a-zA-Z\s]{3,20}" type="text" size="20" maxlength="20" tabindex="2" required>
+            </div>
+
+            <div>
+                <label for="mail">Email: </label>
+                <input id="mail" name="mail" type="email" size="20" maxlength="30" tabindex="3" required>
+            </div>
+    
+            <div>
+                <label for="telf">Tel&eacute;fono: </label>
+                <input class="inpLit" id="telf" name="telf" type="tel" size="20" maxlength="9" tabindex="4" required>
+            </div>
+
+            <div>
+                <label for="interes">Inter&eacute;s:</label>
+                <select id="interes" name="interes" style="width: 150px;" tabindex="5" required>
+                    <option value="">Tipo de Reserva</option>
+                    <option value="Sala General">Sala General</option>
+                    <option value="Sala Reservada">Sala Reservada</option>
+                    <option value="Salón Especial">Salón Especial</option>
+                </select>
+            </div>
+
+            <div>
+                <label for="nComen">N&ordm; Personas:</label>
+                <input class="inpLit" id="nComen" name="nComen" type="number" min="2" max="50" step="1" tabindex="6" required>
+            </div>
+ 
+            <div>
+                <label for="nMesas">N&ordm; Mesas:</label>
+                <input class="inpLit" id="nMesas" name="nMesas" type="number" min="1" max="6" step="1" tabindex="7" required>
+            </div>
+
+            <div>
+                <label for="fecha">Fecha: </label>
+                <input class="inpLit" id="fecha" name="fecha" type="date" size="20" tabindex="8" required>
+            </div>
+
+            <div>
+                <label for="hora">Time: </label>
+                <input class="inpLit" id="hora" name="hora" type="time" min="09:00" max="21:30" tabindex="9" required>
+                <p class="timeInfo">Horario 09:00 to 21:30</p>
+            </div>
+
+            <div>
+                <label style="vertical-align: top;" for="coment">Comentarios:</label>
+                <textarea id="coment" name="coment" rows="6" cols="23" maxlength="100"  placeholder="Sus comentarios" onkeypress='return limita(event, 100)' onkeyup='actualizaInfo(100)' tabindex="10" required></textarea>
+            </div>
+            <div id='info'>Maximo 100 caracteres</div>          
+    
+            <div style="text-align: right;">
+                <input id="send" name="send" type="submit" value="Enviar" tabindex="11"> 
+            </div>
+        </form>
+
+        <hr>
+        <h5>NOS PONDREMOS EN CONTACTO EN BREVE.<br>MUCHAS GRACIAS</h5>
+       
+    </section>
+        <div class="footer">
+            <a href="#">
+                <img src="../img/Icos/IcoFacebook.png" alt="IcoFacebook">
+            </a>
+            <a href="#">
+                <img src="../img/Icos/IcoTwitter.png" alt="IcoTwitter">
+            </a>
+            <a href="#">
+                <img src="../img/Icos/IcoTelegram.png" alt="IcoTelegram">
+            </a>
+            <a href="#">
+                <img src="../img/Icos/IcoMap.png" alt="IcoMap">
+            </a>
+            <a href="#">
+                <img src="../img/Icos/IcoTlf.png" alt="IcoTlf">
+            </a>
+            <a href="#">
+                <img src="../img/Icos/IcoWhatsApp.png" alt="IcoWhatsApp">
+            </a>
+        </div>
+    </div>
+
+        <div class="footer">
+            <a href="https://programasgratisytutoriales.blogspot.com/" target="_blank">
+                &copy; Juan Barr&oacute;s Pazos 2022/23
+            </a>
+        </div>
+        
+</body>
+</html>
